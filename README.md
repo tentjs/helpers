@@ -17,7 +17,7 @@ npm install @tentjs/helpers
 
 ### `bind`
 
-```typescript
+```ts
 import { type Component, tags } from "@tentjs/tent";
 import { bind } from "@tentjs/helpers";
 
@@ -37,20 +37,14 @@ const MyComponent: Component<State> = {
 
 ### `FormEvent<T>`
 
-```typescript
-import { type Component, tags } from "@tentjs/tent";
+```ts
+import { tags } from "@tentjs/tent";
 import { type FormEvent } from "@tentjs/helpers";
 
-type State = { name: string };
-
-const MyComponent: Component<State> = {
-  state: { name: "" },
-  view: ({ state }) =>
-    tags.input("", {
-      oninput: (event: FormEvent<HTMLInputElement>) => {
-        // event.target is typed as `HTMLInputElement`
-        state.name = event.target.value;
-      },
-    }),
-};
+tags.input("", {
+  oninput: (event: FormEvent<HTMLInputElement>) => {
+    // event.target is typed as `HTMLInputElement`
+    state.name = event.target.value;
+  },
+});
 ```
