@@ -30,7 +30,7 @@ const MyComponent: Component<State> = {
       // Bind the input value to the state property `name`
       oninput: bind(state, "name"),
       // or, for nested properties:
-      // oninput: bind(state, "details.age"),
+      // bind(state, "details.age"),
     }),
 };
 ```
