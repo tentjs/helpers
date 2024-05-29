@@ -25,13 +25,32 @@ type State = { name: string; details: { age: number } };
 
 const MyComponent: Component<State> = {
   state: { name: "", details: { age: 0 } },
-  view: ({ state }) => {
-    return tags.input("", {
+  view: ({ state }) =>
+    tags.input("", {
       // Bind the input value to the state property `name`
       oninput: bind(state, "name"),
       // or, for nested properties:
       // oninput: bind(state, "details.age"),
-    });
-  },
+    }),
+};
+```
+
+### `FormEvent<T>`
+
+```typescript
+import { type Component, tags } from "@tentjs/tent";
+import { type FormEvent } from "@tentjs/helpers";
+
+type State = { name: string };
+
+const MyComponent: Component<State> = {
+  state: { name: "" },
+  view: ({ state }) =>
+    tags.input("", {
+      oninput: (event: FormEvent<HTMLInputElement>) => {
+        // event.target is typed as `HTMLInputElement`
+        state.name = event.target.value;
+      },
+    }),
 };
 ```
