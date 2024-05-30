@@ -11,23 +11,25 @@ import type { FormEvent } from "./types";
  * bind(state, 'some.nested.key')
  * ```
  */
-const bind = (state: object, key: string) => (input: FormEvent) => {
-  if (key.includes(".")) {
-    const parts = key.split(".");
-    let t = state;
+function bind(state: object, key: string) {
+  return (input: FormEvent) => {
+    if (key.includes(".")) {
+      const parts = key.split(".");
+      let t = state;
 
-    for (let i = 0; i < parts.length; i++) {
-      const part = parts[i];
-      if (parts.length - 1 === i) {
-        t[part] = input.target.value;
+      for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+        if (parts.length - 1 === i) {
+          t[part] = input.target.value;
+        }
+        t = t[part];
       }
-      t = t[part];
+
+      return;
     }
 
-    return;
-  }
-
-  state[key] = input.target.value;
-};
+    state[key] = input.target.value;
+  };
+}
 
 export { bind };
