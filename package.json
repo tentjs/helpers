@@ -9,17 +9,17 @@
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build",
-    "test": "jest"
+    "test": "jest",
+    "release": "npm run build && npm publish --access public"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tentjs/helpers.git"
   },
-  "keywords": [
-    "tent.js",
-    "helpers",
-    "typescript"
-  ],
+  "keywords": ["tent.js", "helpers", "typescript"],
   "author": "sebkolind <sks1993@gmail.com>",
   "license": "MIT",
   "bugs": {
