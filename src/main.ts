@@ -1,4 +1,6 @@
 import { bind } from "./bind";
+import { on, type OnEvents } from "./on";
+
 import type { FormEvent } from "./types";
 
-export { bind, type FormEvent };
+export { bind, on, type OnEvents, type FormEvent };
