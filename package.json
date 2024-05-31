@@ -8,7 +8,7 @@
   "types": "dist/main.d.ts",
   "scripts": {
     "watch": "parcel watch",
-    "build": "parcel build",
+    "build": "rm -rf .parcel-cache && parcel build",
     "test": "jest",
     "release": "npm run build && npm publish --access public"
   },
