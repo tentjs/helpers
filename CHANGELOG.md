@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added `ternary` - a shorthand for conditional rendering
 - Added `classes` - concatenate class names
+
 ## [0.0.2] - 2024-05-31
 
 ### Added
