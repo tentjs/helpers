@@ -1,6 +1,6 @@
 {
   "name": "@tentjs/helpers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Functions and types that ease writing Tent components.",
   "source": "src/main.ts",
   "main": "dist/main.js",
