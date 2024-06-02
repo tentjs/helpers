@@ -58,3 +58,16 @@ tags.div("", {
   className: classes("container", 2 > 3 && "some-class"),
 });
 ```
+
+### `on`
+
+```ts
+import { tags } from "@tentjs/tent";
+
+tags.input("", {
+  onkeydown: on({
+    Enter: () => console.log("Enter pressed"),
+    Escape: () => console.log("Escape pressed"),
+  }),
+});
+```
