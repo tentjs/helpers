@@ -48,3 +48,13 @@ tags.input("", {
   },
 });
 ```
+
+### `classes`
+
+```ts
+import { tags } from "@tentjs/tent";
+
+tags.div("", {
+  className: classes("container", 2 > 3 && "some-class"),
+});
+```
