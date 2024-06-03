@@ -53,6 +53,7 @@ tags.input("", {
 
 ```ts
 import { tags } from "@tentjs/tent";
+import { classes } from "@tentjs/helpers";
 
 tags.div("", {
   className: classes("container", 2 > 3 && "some-class"),
@@ -63,6 +64,7 @@ tags.div("", {
 
 ```ts
 import { tags } from "@tentjs/tent";
+import { on } from "@tentjs/helpers";
 
 tags.input("", {
   onkeydown: on({
