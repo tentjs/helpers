@@ -1,16 +1,13 @@
 type Options = {
   /**
-   * If `true`, the event listener will be removed after the event handler is called.
-   * Remember to set this to `true`, if you remove elements from the DOM, to avoid memory leaks.
+   * Removes the event listener after the handler is executed.
+   * Set this to `true` if you remove the dependent element from the DOM.
    */
   cleanup?: boolean;
 };
 
 /**
  * Listens for the `Escape` key press on the `document` and executes a handler function.
- *
- * This is used for closing modals, dialogs, etc.. If you are listening on a specific input element,
- * you should use the `keydown` event listener directly on that element.
  *
  * @param {function} fn - The event handler.
  * @param {Options} options
