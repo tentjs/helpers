@@ -3,7 +3,7 @@ import { mount, type Component } from "@tentjs/tent";
 /**
  * Mount multiple components to their respective targets.
  *
- * @param {Components} components - A record of components and their targets.
+ * @param {ComponentConfig} components - An array of `ComponentConfig`'s.
  *
  * @example
  * ```ts
@@ -23,11 +23,6 @@ function mountAll(components: ComponentConfig[]): void {
   }
 }
 
-type Components = Record<Target, Component>;
-type ComponentConfig = {
-  target: Target;
-  component: Component;
-};
-type Target = string;
+type ComponentConfig = { target: string; component: Component };
 
 export { mountAll };
