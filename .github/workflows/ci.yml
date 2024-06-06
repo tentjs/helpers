@@ -31,3 +31,6 @@ jobs:
 
       - name: Run tests
         run: npm run test
+
+      - name: Check JSR
+        run: npm run jsr:check
