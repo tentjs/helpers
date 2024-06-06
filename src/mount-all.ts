@@ -7,25 +7,27 @@ import { mount, type Component } from "@tentjs/tent";
  *
  * @example
  * ```ts
- * const components: Components = {
- *   "#component-1": Component1,
- *   ".component-2": Component2,
- *   "#component-3": Component3,
- * };
- *
- * mountAll(components);
+ * mountAll([
+ *   { target: ".target-1", component: Example1 },
+ *   { target: ".target-2", component: Example2 },
+ *   { target: ".target-3", component: Example3 },
+ * ]);
  * ```
  */
-function mountAll(components: Components): void {
-  for (const key in components) {
-    const Component = components[key];
-    const target = document.querySelector(key);
+function mountAll(components: ComponentConfig[]): void {
+  for (let i = 0; i < components.length; i++) {
+    const { target, component } = components[i];
+    const targetElement = document.querySelector(target);
 
-    mount(target, Component);
+    mount(targetElement, component);
   }
 }
 
 type Components = Record<Target, Component>;
+type ComponentConfig = {
+  target: Target;
+  component: Component;
+};
 type Target = string;
 
 export { mountAll };
