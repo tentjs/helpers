@@ -11,6 +11,8 @@ Functions and types that ease writing [⛺ Tent](https://github.com/tentjs/tent)
 
 ```sh
 npm install @tentjs/helpers
+# or with JSR (recommended)
+npx jsr add @tentjs/helpers
 ```
 
 ## 👀 Examples
