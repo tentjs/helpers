@@ -1,6 +1,6 @@
 # 💁🏻 Helpers
 
-Functions and types that ease writing [⛺ Tent](https://github.com/tentjs/tent) components.
+Functions and types that ease writing ⛺[Tent](https://github.com/tentjs/tent) components.
 
 ## ⚡ Included
 
