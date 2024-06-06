@@ -17,7 +17,7 @@ This is a collection of utility functions and types that can be used to simplify
 
 ```sh
 npm install @tentjs/helpers
-# or with JSR (recommended)
+# or with JSR
 npx jsr add @tentjs/helpers
 ```
 
