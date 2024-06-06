@@ -1,7 +1,7 @@
 type Options = {
   /**
    * Removes the event listener after the handler is executed.
-   * Set this to `true` if you remove the dependent element from the DOM.
+   * Set this to `true` if you remove the dependent element from the DOM to avoid memory leaks.
    */
   cleanup?: boolean;
 };
