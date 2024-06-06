@@ -5,6 +5,9 @@ Functions and types that ease writing [⛺ Tent](https://github.com/tentjs/tent)
 ## ⚡ Included
 
 - `bind` - Bind an Input element value to a state property
+- `classes` - Generate a class string from multiple class names
+- `on` - Easier event handling based on key codes
+- `ternary` - Simplified conditional rendering
 - `FormEvent<T>` - A generic type for form events
 
 ## 📦 Installation
