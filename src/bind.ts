@@ -6,12 +6,13 @@ import type { FormEvent } from "./types";
  * @param state The state object.
  * @param key The key to search for in the state object. If the key is nested, use a dot to separate the keys.
  *
+ * @example
  * ```ts
  * bind(state, 'username')
  * bind(state, 'some.nested.key')
  * ```
  */
-function bind(state: object, key: string) {
+function bind(state: object, key: string): (input: FormEvent) => void {
   return (input: FormEvent) => {
     if (key.includes(".")) {
       const parts = key.split(".");

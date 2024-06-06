@@ -13,7 +13,7 @@
  * }),
  * ```
  */
-function on(events: OnEvents) {
+function on(events: OnEvents): (e: KeyboardEvent) => void {
   return (e: KeyboardEvent) => {
     if (events[e.key]) events[e.key](e);
   };

@@ -9,7 +9,7 @@
  * classes("class1", false && "class2", "class3"); // => "class1 class3"
  * ```
  */
-function classes(...classes: (string | boolean)[]) {
+function classes(...classes: (string | boolean)[]): string {
   return classes.filter(Boolean).join(" ");
 }
 

@@ -20,7 +20,7 @@ function ternary(
   condition: boolean,
   truthy: TentNode | string,
   falsey?: TentNode | string,
-) {
+): TentNode | string {
   return condition ? truthy : falsey ?? "";
 }
 
