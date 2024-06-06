@@ -8,13 +8,12 @@ afterEach(() => {
 describe("onEsc", () => {
   it("calls the provided function", () => {
     const fn = jest.fn();
-    const handler = onEsc(fn);
+
+    onEsc(fn);
 
     document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
 
     expect(fn).toHaveBeenCalled();
-
-    document.removeEventListener("keydown", handler);
   });
 
   it("removes the event listener", () => {

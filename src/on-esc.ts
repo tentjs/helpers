@@ -28,8 +28,6 @@ function onEsc(fn: (e: KeyboardEvent) => void, options?: Options) {
   };
 
   document.addEventListener("keydown", handler);
-
-  return handler;
 }
 
 export { onEsc };
