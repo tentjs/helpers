@@ -8,6 +8,7 @@ Functions and types that ease writing ⛺[Tent](https://github.com/tentjs/tent) 
 - `classes` - Generate a class string from multiple class names
 - `on` - Easier event handling based on key codes
 - `ternary` - Simplified conditional rendering
+- `mountAll` - Mount multiple components at once
 - `FormEvent<T>` - A generic type for form events
 
 ## 📦 Installation
@@ -92,4 +93,16 @@ const MyComponent = {
       // => "3 is greater than 2"
     ),
 };
+```
+
+### `mountAll`
+
+```ts
+import { mountAll } from "@tentjs/helpers";
+
+mountAll([
+  { target: ".target-1", component: Component1 },
+  { target: ".target-2", component: Component2 },
+  { target: ".target-3", component: Component3 },
+]);
 ```
