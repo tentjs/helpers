@@ -75,3 +75,18 @@ tags.input("", {
   }),
 });
 ```
+
+### `ternary`
+
+```ts
+import { tags } from "@tentjs/tent";
+import { ternary } from "@tentjs/helpers";
+
+const MyComponent = {
+  view: () =>
+    tags.div([
+      ternary(3 > 2, "3 is greater than 2", "3 is not greater than 2"),
+      // => "3 is greater than 2"
+    ]),
+};
+```
