@@ -18,14 +18,14 @@ type Options = {
  * ```
  */
 function onEsc(fn: (e: KeyboardEvent) => void, options?: Options) {
-  const handler = (e: KeyboardEvent) => {
+  function handler(e: KeyboardEvent) {
     if (e.key === "Escape") {
       fn(e);
       if (options?.cleanup) {
         document.removeEventListener("keydown", handler);
       }
     }
-  };
+  }
 
   document.addEventListener("keydown", handler);
 }
