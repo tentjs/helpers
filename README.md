@@ -1,6 +1,6 @@
 # 💁🏻 Helpers
 
-Functions and types that ease writing ⛺[Tent](https://github.com/tentjs/tent) components.
+This is a collection of utility functions and types that can be used to simplify common tasks in ⛺ [Tent](https://github.com/tentjs/tent).
 
 ## ⚡ Included
 
@@ -8,6 +8,9 @@ Functions and types that ease writing ⛺[Tent](https://github.com/tentjs/tent) 
 - `classes` - Generate a class string from multiple class names
 - `on` - Easier event handling based on key codes
 - `ternary` - Simplified conditional rendering
+- `fadeIn` - Fade in an element with CSS animations
+- `fadeOut` - Fade out an element with CSS animations
+- `fadeInOut` - A combination of `fadeIn` and `fadeOut`
 - `FormEvent<T>` - A generic type for form events
 
 ## 📦 Installation
