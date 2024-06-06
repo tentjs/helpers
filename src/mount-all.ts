@@ -3,7 +3,7 @@ import { mount, type Component } from "@tentjs/tent";
 /**
  * Mount multiple components to their respective targets.
  *
- * @param {ComponentConfig} components - An array of `ComponentConfig`'s.
+ * @param {ComponentConfig[]} components - An array of `ComponentConfig`'s.
  *
  * @example
  * ```ts
