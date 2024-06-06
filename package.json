@@ -10,6 +10,8 @@
     "watch": "parcel watch",
     "build": "rm -rf .parcel-cache && parcel build",
     "test": "jest",
+    "jsr:check": "npx jsr publish --dry-run",
+    "jsr:publish": "npx jsr publish",
     "release": "npm run build && npm publish --access public"
   },
   "publishConfig": {
@@ -19,11 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/tentjs/helpers.git"
   },
-  "keywords": [
-    "tent.js",
-    "helpers",
-    "typescript"
-  ],
+  "keywords": ["tent.js", "helpers", "typescript"],
   "author": "sebkolind <sks1993@gmail.com>",
   "license": "MIT",
   "bugs": {
