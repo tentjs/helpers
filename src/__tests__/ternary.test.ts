@@ -18,7 +18,7 @@ describe("ternary", () => {
   it("functions in a component", () => {
     mount(document.body, {
       view: () => tags.div(ternary(false, "Hello, world!", "This is false.")),
-    });
+    } as Component);
 
     const el = getByText(document.body, /This is false\./);
 

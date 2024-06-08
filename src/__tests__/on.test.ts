@@ -1,4 +1,4 @@
-import { mount, tags } from "@tentjs/tent";
+import { Component, mount, tags } from "@tentjs/tent";
 import { on } from "../on";
 import { fireEvent, getByRole } from "@testing-library/dom";
 
@@ -31,7 +31,7 @@ describe("on", () => {
         tags.input([], {
           onkeydown: on(events),
         }),
-    });
+    } as Component);
 
     const input = getByRole(document.body, "textbox");
 
