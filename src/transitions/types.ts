@@ -1,8 +1,8 @@
-import type { TentNode } from "@tentjs/tent";
+import type { Attrs, TentNode } from "@tentjs/tent";
 
-type Options = {
-  onStart?: (el: TentNode) => void;
-  onEnd?: (el: TentNode) => void;
+type Options<A extends Attrs> = {
+  onStart?: (el: TentNode<A>) => void;
+  onEnd?: (el: TentNode<A>) => void;
 };
 
 export type { Options };

@@ -1,4 +1,4 @@
-import type { TentNode } from "@tentjs/tent";
+import type { Attrs, TentNode } from "@tentjs/tent";
 import type { Options } from "./types";
 
 /**
@@ -20,7 +20,11 @@ import type { Options } from "./types";
  * }
  * ```
  */
-function fadeOut(el: TentNode, className: string, options: Options = {}) {
+function fadeOut<A extends Attrs>(
+  el: TentNode<A>,
+  className: string,
+  options: Options<A> = {},
+) {
   const { onStart, onEnd } = options;
 
   const { remove } = el;
