@@ -1,4 +1,9 @@
-import { tags, type Children, type TentNode } from "@tentjs/tent";
+import {
+  tags,
+  type Children,
+  type TagAttrs,
+  type TentNode,
+} from "@tentjs/tent";
 
 type Options = {
   /**
@@ -9,23 +14,25 @@ type Options = {
   tag?: string;
 };
 
+type Attributes = Options & TagAttrs;
+
 /**
  * Keep the children of an element after first render.
  *
  * @param {Children} children - The children to keep.
- * @param {Options} [options] - The options for the keep.
+ * @param {Attributes} [attrs] - The attributes for the element.
  *
  * @example
  * ```ts
- * return keep([
+ * keep([
  *   h1("Hello, world!"),
- * ]);
+ * ], { className: "example", tag: "span" });
  * ```
  */
-function keep(children: Children, options: Options = {}): TentNode {
-  const { tag = "div" } = options;
+function keep(children: Children, attrs: Attributes = {}): TentNode {
+  const { tag = "div", ...rest } = attrs;
 
-  return tags[tag](children, { keep: true });
+  return tags[tag](children, { keep: true, ...rest });
 }
 
 export { keep };
