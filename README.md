@@ -9,6 +9,7 @@ Functions and types that ease writing ⛺[Tent](https://github.com/tentjs/tent) 
 - `on` - Easier event handling based on key codes
 - `ternary` - Simplified conditional rendering
 - `mountAll` - Mount multiple components at once
+- `keep` - A wrapper for the `keep` attribute
 - `FormEvent<T>` - A generic type for form events
 
 ## 📦 Installation
@@ -105,4 +106,17 @@ mountAll([
   { target: ".target-2", component: Component2 },
   { target: ".target-3", component: Component3 },
 ]);
+```
+
+### `keep`
+
+```ts
+import { keep } from "@tentjs/helpers";
+
+keep(
+  [
+    // Children to cache after first render
+  ],
+  { keep: true },
+);
 ```
