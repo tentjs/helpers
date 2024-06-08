@@ -1,4 +1,4 @@
-import { type Children, tags } from "@tentjs/tent";
+import { tags, type Children, type TentNode } from "@tentjs/tent";
 
 type Options = {
   /**
@@ -22,7 +22,7 @@ type Options = {
  * ]);
  * ```
  */
-function keep(children: Children, options: Options = {}) {
+function keep(children: Children, options: Options = {}): TentNode {
   const { tag = "div" } = options;
 
   return tags[tag](children, { keep: true });
